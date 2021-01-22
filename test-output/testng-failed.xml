@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [Extent Parallel Test]" parallel="tests">
+  <test thread-count="4" name="TestChrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="test.java.com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="TC4" invocation-numbers="0"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- test.java.com.pulse.Test.ValidLogin2 -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [Extent Parallel Test] -->

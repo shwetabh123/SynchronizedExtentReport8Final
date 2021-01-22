@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 225.411 s <<< FAILURE! - in TestSuite
+TC6(com.pulse.Test.ValidLogin3)  Time elapsed: 11.784 s  <<< FAILURE!
+java.lang.AssertionError: expected [SAB TV] but found [Yahoo India | News, Finance, Cricket, Lifestyle and Entertainment]
+	at com.pulse.Test.ValidLogin3.TC6(ValidLogin3.java:66)
+
+TC8(com.pulse.Test.ValidLogin4)  Time elapsed: 4.635 s  <<< FAILURE!
+java.lang.AssertionError: expected [Business News Live, Share Market News - Read Latest Finance News, IPO, Mutual Funds News] but found [The Economic Times: Business News, Personal Finance, Financial News, India Stock Market Investing, Economy News, SENSEX, NIFTY, NSE, BSE Live, IPO News]
+	at com.pulse.Test.ValidLogin4.TC8(ValidLogin4.java:64)
+

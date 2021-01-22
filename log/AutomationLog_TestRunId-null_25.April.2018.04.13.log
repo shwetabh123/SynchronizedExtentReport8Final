@@ -1,0 +1,19 @@
+2018-04-25 16:13:28 INFO  BaseTest:151 - Chrome Browser opened
+2018-04-25 16:13:28 INFO  BaseTest:350 - Chrome Browser opened
+2018-04-25 16:13:28 INFO  BaseTest:429 - Implicit wait given
+2018-04-25 16:13:42 INFO  BaseTest:438 - Url opened
+2018-04-25 16:13:42 INFO  BaseTest:458 - Executing Test Case id is : null
+2018-04-25 16:13:43 INFO  ValidLogin:89 - Executing  Step No :1
+2018-04-25 16:13:43 INFO  ValidLogin:92 - Verifying CeB Logo
+2018-04-25 16:13:45 INFO  ValidLogin:106 - Executing  Step No :2
+2018-04-25 16:13:50 INFO  ValidLogin:110 - type username
+2018-04-25 16:13:57 INFO  ValidLogin:139 - Executing  Step No :3
+2018-04-25 16:13:57 INFO  ValidLogin:144 - type password
+2018-04-25 16:14:03 INFO  ValidLogin:172 - Executing  Step No :4
+2018-04-25 16:14:03 INFO  ValidLogin:174 - click select
+2018-04-25 16:14:11 INFO  ValidLogin:202 - Executing  Step No :5
+2018-04-25 16:14:11 INFO  ValidLogin:204 - click dropdown 
+2018-04-25 16:14:18 INFO  ValidLogin:229 - Executing  Step No :6
+2018-04-25 16:14:18 INFO  ValidLogin:230 - click select
+2018-04-25 16:14:42 INFO  ValidLogin:256 - click arrrow down
+2018-04-25 16:14:46 INFO  ValidLogin:260 - click logout

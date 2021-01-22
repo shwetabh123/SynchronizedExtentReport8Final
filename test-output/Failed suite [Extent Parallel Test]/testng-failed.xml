@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Extent Parallel Test]]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test name="ExtentWithParallelClasses(failed)(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="TC2" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+    </classes>
+  </test> <!-- ExtentWithParallelClasses(failed)(failed) -->
+  <test name="ExtentWithParallelClasses1(failed)(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="TC4" invocation-numbers="0"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+    </classes>
+  </test> <!-- ExtentWithParallelClasses1(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Extent Parallel Test]] -->

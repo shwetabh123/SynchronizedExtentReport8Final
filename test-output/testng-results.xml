@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="7" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Extent Parallel Test" duration-ms="132459" started-at="2019-07-15T03:25:52Z" finished-at="2019-07-15T03:28:04Z">
+    <groups>
+      <group name="abc">
+        <method signature="ValidLogin1.TC1(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="TC1" class="test.java.com.pulse.Test.ValidLogin1"/>
+      </group> <!-- abc -->
+    </groups>
+    <test name="TestChrome" duration-ms="132459" started-at="2019-07-15T03:25:52Z" finished-at="2019-07-15T03:28:04Z">
+      <class name="test.java.com.pulse.Test.ValidLogin2">
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-07-15T03:26:23Z" finished-at="2019-07-15T03:26:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@147e2ae7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, java.lang.String)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="beforeMethod" is-config="true" duration-ms="4545" started-at="2019-07-15T03:26:23Z" finished-at="2019-07-15T03:26:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin2.TC3(java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC3(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="TC3" duration-ms="48421" started-at="2019-07-15T03:26:27Z" description="This test case verifies whether the reading check box is selected." finished-at="2019-07-15T03:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin2.TC3(java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC3 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="tearDown" is-config="true" duration-ms="110" started-at="2019-07-15T03:27:16Z" finished-at="2019-07-15T03:27:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC3 status=SUCCESS method=ValidLogin2.TC3(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, java.lang.String)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="beforeMethod" is-config="true" duration-ms="6511" started-at="2019-07-15T03:27:16Z" finished-at="2019-07-15T03:27:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin2.TC4(java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC4(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="TC4" duration-ms="41950" started-at="2019-07-15T03:27:22Z" description="This test case verifies whether the country is selected." finished-at="2019-07-15T03:28:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin2.TC4(java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC4 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="tearDown" is-config="true" duration-ms="110" started-at="2019-07-15T03:28:04Z" finished-at="2019-07-15T03:28:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC4 status=SUCCESS method=ValidLogin2.TC4(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.java.com.pulse.Test.ValidLogin2@4562e04d]" name="afterClass" is-config="true" duration-ms="125" started-at="2019-07-15T03:28:04Z" finished-at="2019-07-15T03:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.java.com.pulse.Test.ValidLogin2 -->
+      <class name="test.java.com.pulse.Test.ValidLogin1">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="beforeSuite" is-config="true" duration-ms="564" started-at="2019-07-15T03:25:51Z" finished-at="2019-07-15T03:25:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest(org.testng.xml.XmlTest)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="beforeTest" is-config="true" duration-ms="31" started-at="2019-07-15T03:25:52Z" finished-at="2019-07-15T03:25:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@95ad7f56]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-07-15T03:25:52Z" finished-at="2019-07-15T03:25:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@147e2ae7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, java.lang.String)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="beforeMethod" is-config="true" duration-ms="9002" started-at="2019-07-15T03:25:52Z" finished-at="2019-07-15T03:26:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin1.TC1(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC1(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="TC1" duration-ms="12787" started-at="2019-07-15T03:26:01Z" description="This test case is to verify that the firstname and lastname is entered." finished-at="2019-07-15T03:26:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin1.TC1(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC1 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="tearDown" is-config="true" duration-ms="594" started-at="2019-07-15T03:26:14Z" finished-at="2019-07-15T03:26:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC1 status=SUCCESS method=ValidLogin1.TC1(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, java.lang.String)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="beforeMethod" is-config="true" duration-ms="4518" started-at="2019-07-15T03:26:14Z" finished-at="2019-07-15T03:26:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin1.TC2(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TC2(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="TC2" duration-ms="3487" started-at="2019-07-15T03:26:19Z" description="This test case verifies whether the radio button single is selected." finished-at="2019-07-15T03:26:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.java.com.pulse.Test.ValidLogin1.TC2(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="tearDown" is-config="true" duration-ms="94" started-at="2019-07-15T03:26:22Z" finished-at="2019-07-15T03:26:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC2 status=SUCCESS method=ValidLogin1.TC2(java.lang.reflect.Method)[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="afterClass" is-config="true" duration-ms="109" started-at="2019-07-15T03:26:23Z" finished-at="2019-07-15T03:26:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="testDown()[pri:0, instance:test.java.com.pulse.Test.ValidLogin1@313ac989]" name="testDown" is-config="true" duration-ms="0" started-at="2019-07-15T03:28:05Z" finished-at="2019-07-15T03:28:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDown -->
+      </class> <!-- test.java.com.pulse.Test.ValidLogin1 -->
+    </test> <!-- TestChrome -->
+  </suite> <!-- Extent Parallel Test -->
+</testng-results>

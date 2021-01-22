@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="8" verbose="0" name="Failed suite [Extent Parallel Test]" parallel="tests">
+  <test name="TestFirefox(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin3">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="TC6" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin3 -->
+      <class name="com.pulse.Test.ValidLogin4">
+        <methods>
+          <include name="TC8" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin4 -->
+    </classes>
+  </test> <!-- TestFirefox(failed) -->
+</suite> <!-- Failed suite [Extent Parallel Test] -->

@@ -1,0 +1,2 @@
+2019-05-17 09:29:42 INFO  RetryExec:94 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://192.168.2.6:4444: The target server failed to respond
+2019-05-17 09:29:42 INFO  RetryExec:110 - Retrying request to {}->http://192.168.2.6:4444

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <parameter name="browser" value="chrome"/>
+  <test name="Test(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testValidLogin4" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+      <class name="com.pulse.Test.ValidLogin3">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="testValidLogin6" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin3 -->
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testValidLogin2" invocation-numbers="0"/>
+          <include name="testDown"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

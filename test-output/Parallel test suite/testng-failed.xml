@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Parallel test suite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="generic.ExtentReporttListener"/>
+  </listeners>
+  <test name="Regression 1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+      <class name="com.pulse.Test.ValidLogin">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testValidLogin2" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin -->
+      <class name="com.pulse.Test.ValidLogin3">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin3 -->
+    </classes>
+  </test> <!-- Regression 1(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->
