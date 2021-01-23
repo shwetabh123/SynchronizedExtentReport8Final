@@ -60,7 +60,7 @@ public class ValidLogin4 extends BaseTest {
 		childTestnew.get().log(Status.INFO, "Running " + method.getName());
 		String actualTitle = driver.getTitle();
 		childTestnew.get().assignCategory("smoke testing ");
-		String expectedTitle = "Business News Live, Share Market News - Read Latest Finance News, IPO, Mutual Funds News";
+		String expectedTitle = "Business News Today: Read Latest Business news, India Business News Live, Share Market & Economy News | The Economic Times";
 		assertEquals(actualTitle, expectedTitle);
 		childTestnew.get().log(Status.INFO, "Verifying Title " + appURL3);
 		System.out.println("TC8 Passed");
