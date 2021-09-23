@@ -465,6 +465,8 @@ public class BasePage {
 	 * test.addScreenCapture(filePath)); // test.log(LogStatus.INFO,
 	 * result.getMethod().getMethodName() + "  test is failed",
 	 * result.getThrowable().getMessage()); }
+	 
+	 
 	 */
 	public String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
