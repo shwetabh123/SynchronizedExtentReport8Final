@@ -1,12 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 225.411 s <<< FAILURE! - in TestSuite
-TC6(com.pulse.Test.ValidLogin3)  Time elapsed: 11.784 s  <<< FAILURE!
-java.lang.AssertionError: expected [SAB TV] but found [Yahoo India | News, Finance, Cricket, Lifestyle and Entertainment]
-	at com.pulse.Test.ValidLogin3.TC6(ValidLogin3.java:66)
+Tests run: 23, Failures: 2, Errors: 0, Skipped: 21, Time elapsed: 22.922 s <<< FAILURE! - in TestSuite
+beforeMethod(com.pulse.Test.ValidLogin1)  Time elapsed: 22.475 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-76PGCCB3', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 192.168.2.4:4444 [/192.168.2.4] failed: Connection timed out: connect
+Caused by: java.net.ConnectException: Connection timed out: connect
 
-TC8(com.pulse.Test.ValidLogin4)  Time elapsed: 4.635 s  <<< FAILURE!
-java.lang.AssertionError: expected [Business News Live, Share Market News - Read Latest Finance News, IPO, Mutual Funds News] but found [The Economic Times: Business News, Personal Finance, Financial News, India Stock Market Investing, Economy News, SENSEX, NIFTY, NSE, BSE Live, IPO News]
-	at com.pulse.Test.ValidLogin4.TC8(ValidLogin4.java:64)
+beforeMethod(com.pulse.Test.ValidLogin3)  Time elapsed: 22.478 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'LAPTOP-76PGCCB3', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 192.168.2.4:4444 [/192.168.2.4] failed: Connection timed out: connect
+Caused by: java.net.ConnectException: Connection timed out: connect
 

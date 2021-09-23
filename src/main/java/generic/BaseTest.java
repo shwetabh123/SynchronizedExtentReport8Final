@@ -67,7 +67,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 public abstract class BaseTest implements IAutoConst {
-	protected static WebDriver driver=null ;
+	protected static WebDriver driver = null;
 	public static int REPEAT_MINUS = 100;
 	Logger APP_LOGS = Logger.getLogger("BaseTest");
 	public static String scrshotFolderLoc;
@@ -87,7 +87,7 @@ public abstract class BaseTest implements IAutoConst {
 	public static ThreadLocal<ExtentTest> parentTest = new ThreadLocal<ExtentTest>();
 	public static ThreadLocal<ExtentTest> childTest = new ThreadLocal<ExtentTest>();
 	public static ThreadLocal<ExtentTest> childTestnew = new ThreadLocal<ExtentTest>();
-	
+
 	public static Excel eLib = new Excel();
 
 	@BeforeSuite
@@ -149,78 +149,58 @@ public abstract class BaseTest implements IAutoConst {
 		switch (browser) {
 		case "firefox":
 			System.out.println("Opening firefox driver");
-			
-			
-			
-			
+
 			/*
 			 * // System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe"); String
 			 * pathToBinary = "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe";
 			 * ProfilesIni profile = new ProfilesIni(); FirefoxProfile testProfile = new
 			 * FirefoxProfile(); testProfile.setAcceptUntrustedCertificates(true);
-			 * testProfile.setAssumeUntrustedCertificateIssuer(true);
-			 *  DesiredCapabilities dc= DesiredCapabilities.firefox();
+			 * testProfile.setAssumeUntrustedCertificateIssuer(true); DesiredCapabilities
+			 * dc= DesiredCapabilities.firefox();
 			 * dc.setCapability("webdriver.gecko.driver","C:\\geckodriver.exe");
 			 * dc.setCapability(FirefoxDriver.PROFILE, testProfile);
 			 * dc.setCapability(FirefoxDriver.BINARY, pathToBinary); driver = new
-			 * FirefoxDriver(dc);
-			 * return DesiredCapabilities.firefox();
+			 * FirefoxDriver(dc); return DesiredCapabilities.firefox();
 			 */
-			
-			
-			
-			
-			
-		//	 System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
 
-			
-			  DesiredCapabilities capability = new DesiredCapabilities().firefox();
-			  capability.setBrowserName("firefox");
-			  capability.setPlatform(Platform.ANY);
-			  // capability.setVersion("72");
-			  
-			  capability.setCapability("marionette", false);
-			  capability.setCapability("binary", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"); 
-			
-			  
-			//  capability.setCapability("job-name", "Fancy Firefox profile"); 
+			// System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+
+			DesiredCapabilities capability = new DesiredCapabilities().firefox();
+			capability.setBrowserName("firefox");
+			capability.setPlatform(Platform.ANY);
+			// capability.setVersion("72");
+
+			capability.setCapability("marionette", false);
+			capability.setCapability("binary", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+
+			// capability.setCapability("job-name", "Fancy Firefox profile");
 			/*
 			 * FirefoxProfile profile = new FirefoxProfile();
 			 * profile.setPreference("network.http.phishy-userpass-length", 255);
-			 * capability.setCapability(FirefoxDriver.PROFILE, profile);
-			 * FirefoxOptions firefox = new FirefoxOptions();
-			 * firefox.setCapability("marionette", false);
-			 */
-				 
-			
-		
-			  return  DesiredCapabilities.firefox();
-			 
-			  
-			  
-
-			/*
-			 * System.setProperty("webdriver.firefox.bin",
-			 * "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"); String
-			 * Firefoxdriverpath = "C:\\geckodriver.exe";
-			 * System.setProperty("webdriver.gecko.driver", Firefoxdriverpath);
-			 * DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-			 * capabilities.setCapability("marionette", true); driver = new
-			 * FirefoxDriver(capabilities);
+			 * capability.setCapability(FirefoxDriver.PROFILE, profile); FirefoxOptions
+			 * firefox = new FirefoxOptions(); firefox.setCapability("marionette", false);
 			 */
 
-			/*
-			 * FirefoxOptions firefox = new FirefoxOptions();
-			 * firefox.setCapability("marionette", false); DesiredCapabilities capability =
-			 * DesiredCapabilities.firefox(); capability.setBrowserName("firefox");
-			 * capability.setPlatform(Platform.WINDOWS); capability.setVersion("72"); return
-			 * DesiredCapabilities.firefox();
-			 */
+			return DesiredCapabilities.firefox();
 
-		
-			  
-			  
-			  
+		/*
+		 * System.setProperty("webdriver.firefox.bin",
+		 * "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"); String
+		 * Firefoxdriverpath = "C:\\geckodriver.exe";
+		 * System.setProperty("webdriver.gecko.driver", Firefoxdriverpath);
+		 * DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		 * capabilities.setCapability("marionette", true); driver = new
+		 * FirefoxDriver(capabilities);
+		 */
+
+		/*
+		 * FirefoxOptions firefox = new FirefoxOptions();
+		 * firefox.setCapability("marionette", false); DesiredCapabilities capability =
+		 * DesiredCapabilities.firefox(); capability.setBrowserName("firefox");
+		 * capability.setPlatform(Platform.WINDOWS); capability.setVersion("72"); return
+		 * DesiredCapabilities.firefox();
+		 */
+
 		case "chrome":
 			System.out.println("Opening chrome driver");
 			DesiredCapabilities capability1 = DesiredCapabilities.chrome();

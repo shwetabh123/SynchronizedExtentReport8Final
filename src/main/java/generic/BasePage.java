@@ -84,6 +84,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
+import com.aventstack.extentreports.Status;
+
+
 import org.testng.*;
 
 //import com.relevantcodes.extentreports.ExtentReports;
@@ -157,12 +161,18 @@ public class BasePage {
 	public By getLocator(String ElementName) throws Exception {
 		// Read value using the logical name as Key
 		String locator = p.getProperty(ElementName);
+		
 		// Split the value which contains locator type and locator value
+		
 		String locatorType = locator.split(":")[0];
+		
 		String locatorValue = locator.split(":")[1];
+		
 		// Return a instance of By class based on type of locator
 		if (locatorType.toLowerCase().equals("id"))
+			
 			return By.id(locatorValue);
+		
 		else if (locatorType.toLowerCase().equals("name"))
 			return By.name(locatorValue);
 		else if ((locatorType.toLowerCase().equals("classname")) || (locatorType.toLowerCase().equals("class")))
@@ -194,6 +204,31 @@ public class BasePage {
 	 * public void moveCursorToElement(WebElement element) { Actions a = new
 	 * Actions(BasePage.driver); a.moveToElement(element); }
 	 */
+	
+	
+	
+	
+	
+	//using webelement
+	public void moveToElementAndClick_custom(WebElement element){
+		try{
+			JavascriptExecutor executor = (JavascriptExecutor) driver;
+			
+			executor.executeScript("arguments[0].scrollIntoView(true);", element);
+			
+			Actions actions = new Actions(driver);		
+			
+			actions.moveToElement(element).build().perform();
+			Thread.sleep(5000);
+			actions.moveToElement(element).click(element).build().perform();
+			
+			Thread.sleep(1000);
+		}catch(Exception e){
+			 e.printStackTrace();
+		}
+	}
+	
+	//using string location
 	public boolean mouseHoverToElementAndClick(WebDriver driver, String selector) {
 		APP_LOGS.info("Mouse Hover to Element and perform click");
 		String framedxpath = "";
@@ -512,6 +547,22 @@ public class BasePage {
 			return false;
 		}
 	}
+	public static boolean Click_custom(WebElement element) {
+		try {
+			element.click();
+			
+			return false;
+		} catch (Exception e) {
+			keyerrormsg = e.getMessage().split("\n")[0].split("<")[0];
+			System.out.println(keyerrormsg);
+			APP_LOGS.info("keyerrormsg=" + keyerrormsg);
+			
+			return false;
+		}
+	}
+	
+	
+	
 
 	/*
 	 * public static void ClickWithWait(WebDriver driver, String selector) { (new
@@ -554,7 +605,9 @@ public class BasePage {
 		}
 	}
 
-	public boolean type(String ElementName, String data) throws IOException {
+	public boolean type(String ElementName, String data) throws IOException
+	
+	{
 		// loadPropertyFile is a user defined method to locate multiple properties file
 		Properties configProp = loadPropertyFile(System.getProperty("user.dir") + "\\src\\main\\java\\objects\\object.properties");
 		System.out.println("Data--->>" + data);
@@ -599,6 +652,59 @@ public class BasePage {
 		}
 	}
 
+	
+public boolean type_custom(WebElement we, String data) throws IOException
+	
+	{
+		
+		Properties configProp = loadPropertyFile(System.getProperty("user.dir") + "\\src\\main\\java\\objects\\object.properties");
+		System.out.println("Data--->>" + data);
+		try {
+			
+			
+			
+			if (!we.equals(null) || !we.equals("")) {
+				if (!data.isEmpty()) {
+					if (we.isEnabled() == true) {
+						if (we.getAttribute("type") != null) {
+							if (!we.getAttribute("type").equalsIgnoreCase("file")) // this line added for KR-5389
+							{
+								we.clear();
+								// element = findElement(object,data);
+								if (!we.getAttribute("value").isEmpty()) {
+									Actions action = new Actions(driver);
+									action.doubleClick(we).perform();
+									we.sendKeys(Keys.DELETE);
+								}
+							}
+						} else
+							we.clear();
+					}
+					we.sendKeys(data);
+					// element.sendKeys(Keys.chord(data));
+				} else {
+					if (we.isEnabled() == true) {
+						we.clear();
+					}
+				}
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Exception e) {
+			keyerrormsg = e.getMessage().split("\n")[0].split("<")[0];
+			System.out.println(keyerrormsg);
+			APP_LOGS.info("keyerrormsg=" + keyerrormsg);
+			return false;
+		}
+	}
+
+	
+	
+	
+	
+	
+	
 	public boolean isDisplayed(WebDriver driver, String selector) {
 		try {
 			WebElement we = driver.findElement(By.xpath(selector));
@@ -615,6 +721,23 @@ public class BasePage {
 		}
 	}
 
+	
+	public boolean isDisplayed_Custom(WebElement we) {
+		try {
+			
+			if (we.isDisplayed()) {
+				System.out.println("Element is displayed");
+				return true;
+			} else {
+				return false;
+			}
+		} catch (Throwable e) {
+			keyerrormsg = e.getMessage().split("\n")[0].split("<")[0];
+			System.out.println(keyerrormsg);
+			return false;
+		}
+	}
+	
 	public boolean verifyElementPresent(WebDriver driver, String selector) {
 		try {
 			WebElement we = driver.findElement(By.xpath(selector));
@@ -630,18 +753,48 @@ public class BasePage {
 		}
 	}
 
+	
+	
+	public boolean verifyElementPresent_custom(WebElement element) {
+		try {
+			element.isDisplayed();
+			
+			APP_LOGS.info("Element exists");
+			System.out.println("Element exists");
+			return true;
+		} catch (NoSuchElementException e) {
+			keyerrormsg = e.getMessage().split("\n")[0].split("<")[0];
+			System.out.println(keyerrormsg);
+			APP_LOGS.info("Element does not exists");
+			System.out.println("Element does not exists");
+			return false;
+		}
+	}
+
+	
+	
+	
+	
 	public boolean openNewTab(WebDriver driver) {
 		try {
 			int oldwindowsize = 0;
 			int newwindowsize = 0;
+			
 			Set<String> all_Window = driver.getWindowHandles();
+			
 			oldwindowsize = all_Window.size();
+			
 			APP_LOGS.info("Before opening Window size is :" + oldwindowsize);
+			
 			((JavascriptExecutor) driver).executeScript("window.open();");
+			
 			Set<String> all_Window_new = driver.getWindowHandles();
+			
 			newwindowsize = all_Window_new.size();
+			
 			APP_LOGS.info("After opening Window size is  :" + newwindowsize);
-			if (newwindowsize > oldwindowsize) {
+			if (newwindowsize > oldwindowsize) 
+			{
 				APP_LOGS.info("Open new tab is passed");
 				return true;
 			} else {

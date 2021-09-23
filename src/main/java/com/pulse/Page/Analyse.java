@@ -142,8 +142,9 @@ public class Analyse extends BasePage{
 	public void clickanalysebutton()
 	{
 		
-		b.mouseHoverToElementAndClick(driver, "//*[@href='/Pulse/Analyze']");
+		b.mouseHoverToElementAndClick(driver, "//*[@href='/Pulse/Analyze']");//using string location
 		
+		b.moveToElementAndClick_custom(Analysebutton);//using webelement
 	
 	}
 	
@@ -154,6 +155,8 @@ public class Analyse extends BasePage{
 	
 	b.verifyElementPresent(driver, " //*[@href=\"/Pulse/Analyze\"]");
 
+	verifyElementPresent_custom(Analysebutton);
+	
 	}
 	
 	
@@ -168,11 +171,14 @@ public class Analyse extends BasePage{
 	
 	
 
-	public void clickanalyzesearch()
+	public void clickanalyzesearch() throws IOException
 	{
 		
 	
 	clickanalyzesearch.sendKeys("Copy Of Shwetabh DV Survey - Consuming Account - SA");
+	
+	
+	type_custom(clickanalyzesearch,"Copy Of Shwetabh DV Survey - Consuming Account - SA");
 
 	}
 	
@@ -183,12 +189,15 @@ public class Analyse extends BasePage{
 	
 	clickanalyzesearchbutton.click();
 	
+	Click_custom(clickanalyzesearchbutton);
+	
 	}
 	
 	public void DVAnalyseCopyOfShwetabhDVSurveyConsumingAccountSA()
 	{
 	
 	DVAnalyseCopyOfShwetabhDVSurveyConsumingAccountSA.click();
+	
 	
 	}
 	public void SpotLightReportsTab()

@@ -10,7 +10,8 @@
           <include name="beforeMethod"/>
           <include name="testDown"/>
           <include name="beforeSuite"/>
-          <include name="TC6" invocation-numbers="0"/>
+          <include name="TC6"/>
+          <include name="TC5"/>
           <include name="tearDown"/>
           <include name="beforeTest"/>
           <include name="afterClass"/>
@@ -18,7 +19,8 @@
       </class> <!-- com.pulse.Test.ValidLogin3 -->
       <class name="com.pulse.Test.ValidLogin4">
         <methods>
-          <include name="TC8" invocation-numbers="0"/>
+          <include name="TC7"/>
+          <include name="TC8"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="testDown"/>
@@ -30,4 +32,35 @@
       </class> <!-- com.pulse.Test.ValidLogin4 -->
     </classes>
   </test> <!-- TestFirefox(failed) -->
+  <test name="TestChrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.pulse.Test.ValidLogin1">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="TC2"/>
+          <include name="beforeTest"/>
+          <include name="TC1"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin1 -->
+      <class name="com.pulse.Test.ValidLogin2">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="TC3"/>
+          <include name="TC4"/>
+          <include name="testDown"/>
+          <include name="beforeSuite"/>
+          <include name="tearDown"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.pulse.Test.ValidLogin2 -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [Extent Parallel Test] -->
