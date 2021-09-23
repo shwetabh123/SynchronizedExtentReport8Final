@@ -246,7 +246,7 @@ public class BasePage {
 			APP_LOGS.info(keyerrormsg);
 			return false;
 		}
-		APP_LOGS.info("Mouse Hover to Element and perform click succeed       ");
+		APP_LOGS.info("Mouse Hover to Element and perform click succeed ");
 		return true;
 	}
 
