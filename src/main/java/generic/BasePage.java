@@ -209,7 +209,7 @@ public class BasePage {
 	
 	
 	
-	//using webelement
+	//using webelement--shwetabh
 	public void moveToElementAndClick_custom(WebElement element){
 		try{
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
